@@ -181,7 +181,7 @@ body {
 #contact {
     background: #f9f9f9;
     padding: 25px;
-    margin: 150px 0;
+    margin: 70px 0;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -285,108 +285,64 @@ fieldset {
 }
 
 
-/* Tabla */
+/* Codigo de la tabla de codepen */
 
-.rwd-table {
-    margin: 1em 0;
-    min-width: 550px;
-}
-
-.rwd-table tr {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-}
-
-.rwd-table th {
-    display: none;
-}
-
-.rwd-table td {
-    display: block;
-}
-
-.rwd-table td:first-child {
-    padding-top: 0.5em;
-}
-
-.rwd-table td:last-child {
-    padding-bottom: 0.5em;
-}
-
-.rwd-table td:before {
-    content: attr(data-th) ": ";
-    font-weight: bold;
-    width: 6.5em;
-    display: inline-block;
-}
-
-@media (min-width: 480px) {
-    .rwd-table td:before {
-        display: none;
-    }
-}
-
-.rwd-table th,
-.rwd-table td {
-    text-align: center;
-}
-
-@media (min-width: 480px) {
-    .rwd-table th,
-    .rwd-table td {
-        display: table-cell;
-        padding: 0.25em 0.5em;
-    }
-    .rwd-table th:first-child,
-    .rwd-table td:first-child {
-        padding-left: 0;
-    }
-    .rwd-table th:last-child,
-    .rwd-table td:last-child {
-        padding-right: 0;
-    }
-}
-
-
-/* body {
-    padding: 0 2em;
-    font-family: Montserrat, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    color: #444;
-    background: #eee;
-} */
-
-h1 {
-    font-weight: normal;
-    letter-spacing: -1px;
-    color: #34495e;
-}
-
-.rwd-table {
-    background: white;
+.codepen-tabla h1 {
+    font-size: 30px;
     color: #fff;
-    border-radius: 0.4em;
-    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-.rwd-table tr {
-    border-color: white;
+.codepen-tabla table {
+    width: 100%;
+    table-layout: fixed;
 }
 
-.rwd-table th,
-.rwd-table td {
-    margin: 0.5em 1em;
+.codepen-tabla .tbl-header {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-@media (min-width: 480px) {
-    .rwd-table th,
-    .rwd-table td {
-        padding: 1em !important;
-    }
+.codepen-tabla .tbl-content {
+    height: 300px;
+    overflow-x: auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.rwd-table th,
-.rwd-table td:before {
-    color: black;
+.codepen-tabla th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.codepen-tabla td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
