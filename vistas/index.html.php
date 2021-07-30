@@ -24,39 +24,37 @@
                 <fieldset>
                     <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                 </fieldset>
-             
-            <!-- tabla -->
-            
-<table class="rwd-table">
-      <thead>
-        <tr>
-          <th>actor_id</th>
-          <th>first_name</th>
-          <th>last_name</th>
-        </tr>
-      </thead>
-    </table>
-  </div>
-<!-- Tabla y contenido 🡻 -->
-  <div class="tbl-content">
-    <table cellpadding="0" cellspacing="2" border="0">
-      <tbody>
-      <?php
+
+
+                </tbody>
+                </table>
+        </div>
+
+        <!-- tabla y contenido-->
+        <div class="centrar">
+            <table class="rwd-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <tbody>
+                <?php
         while ($dato = mysqli_fetch_assoc($resultado)) {
             echo "<tr>
                     <th  scope='row'>{$dato['actor_id']}</th>
                     <td>{$dato['first_name']}</td>
                     <td>{$dato['last_name']}</td>
-                    <td></td>
-                </tr>";
+                    </tr>";
         }
         ?>
-      </tbody>
-    </table>
-    </div>
-
-
-    <script src="javascript/js.js"></script>
+        </div>
+        <script src="javascript/js.js"></script>
 </body>
 
 </html>
