@@ -3,14 +3,14 @@
 <div class="centrar">
     <div class="container">
         <form id="contact" action="" method="post">
-            <h3>Actores</h3>
-            <h4>Formulario para ingresar los actores</h4>
+            <h3>Paises</h3>
+            <h4>Formulario para ingresar los paises</h4>
             <fieldset>
-                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                <input placeholder="Ingrese su nombre" name="nombre" type="text" tabindex="1" required autofocus>
             </fieldset>
-            <fieldset>
-                <input placeholder="Your Email Address" type="email" tabindex="2" required>
-            </fieldset>
+            <!-- <fieldset>
+                <input placeholder="Inserte su apellido" name="apellido" type="text" tabindex="2" required>
+            </fieldset> -->
             <!-- <fieldset>
                     <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
                 </fieldset>
@@ -20,8 +20,11 @@
                 <fieldset>
                     <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
                 </fieldset> -->
+            <div>
+                <?php echo $_SESSION['mensaje'] ?? "" ?>
+            </div>
             <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                <button name="insetar" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
             </fieldset>
         </form>
     </div>
@@ -48,9 +51,9 @@
 
                         while ($dato = mysqli_fetch_assoc($resultado)) {
                             echo "<tr>
-                                    <td>{$dato['actor_id']}</td>
-                                    <td>{$dato['first_name']}</td>
-                                    <td>{$dato['last_name']}</td>
+                                    <td>{$dato['country_id']}</td>
+                                    <td>{$dato['country']}</td>
+                                    <td>{$dato['last_update']}</td>
                                 </tr>";
                         }
                     

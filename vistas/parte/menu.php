@@ -8,17 +8,17 @@
 
 <div class="menu">
     <ul>
-        <a href="#">
+        <a href="actores.php">
             <li>Actores</li>
         </a>
-        <a href="#">
+        <a href="idiomas.php">
             <li>Idiomas</li>
         </a>
-        <a href="#">
+        <a href="categorias.php">
             <li>Categoria</li>
         </a>
-        <a href="#">
-            <li>LINK FOUR</li>
+        <a href="paises.php">
+            <li>Paises</li>
         </a>
         <a href="#">
             <li>LINK FIVE</li>
