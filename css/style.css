@@ -163,7 +163,14 @@ body {
 /* contenido centrado */
 
 .container {
-    max-width: 600px;
+    max-width: 650px;
+    width: 150%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container2 {
+    max-width: 700px;
     width: 150%;
     margin: 0 auto;
     position: relative;
@@ -286,6 +293,10 @@ fieldset {
 
 
 /* Codigo de la tabla de codepen */
+
+.codepen-tabla a {
+    color: white;
+}
 
 .codepen-tabla h1 {
     font-size: 30px;

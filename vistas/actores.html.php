@@ -29,21 +29,22 @@
         </form>
     </div>
 
-    <div class="container">
+    <div class="container2">
         <section class="codepen-tabla">
             <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table>
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                 </table>
             </div>
             <div class="tbl-content">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table>
                     <tbody>
 
 
@@ -54,6 +55,10 @@
                                     <td>{$dato['actor_id']}</td>
                                     <td>{$dato['first_name']}</td>
                                     <td>{$dato['last_name']}</td>
+                                    <th>
+                                        <a class='codepen-table' href='actores.php?editar={$dato['actor_id']}'>Eliminar</a>
+                                        <a class='codepen-table' href='actores.php?eliminar={$dato['actor_id']}'>Editar</a>
+                                    </th>
                                 </tr>";
                         }
                     

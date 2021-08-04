@@ -18,3 +18,21 @@ function insertarActor($conexion, $datos){
     
     return $resultado;
 }
+
+function eliminarActor($conexion, $id){
+
+    $query = "DELETE FROM film_actor WHERE actor_id = $id";
+
+    $resultado = mysqli_query($conexion, $query);
+
+    $query = "DELETE FROM actor WHERE actor_id = $id";
+
+    $resultado = mysqli_query($conexion, $query);
+
+    return $resultado;
+}
+
+
+function obtenerActoresPorID($conexion, $id){
+    
+}

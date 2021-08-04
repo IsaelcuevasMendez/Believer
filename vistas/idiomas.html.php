@@ -32,18 +32,19 @@
     <div class="container">
         <section class="codepen-tabla">
             <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table>
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                 </table>
             </div>
             <div class="tbl-content">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table>
                     <tbody>
 
 
@@ -54,6 +55,9 @@
                                     <td>{$dato['language_id']}</td>
                                     <td>{$dato['name']}</td>
                                     <td>{$dato['last_update']}</td>
+                                    <td>
+                                        <a href=''></a>
+                                    </td>
                                 </tr>";
                         }
                     
