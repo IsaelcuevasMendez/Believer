@@ -1,7 +1,7 @@
 <?php
 require_once 'model/model_actores.php';
 
-$pagina = 'Inicio';
+$pagina = 'Actores';
 
 $resultado = obtenerActores($conexion);
 try{

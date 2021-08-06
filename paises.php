@@ -1,7 +1,7 @@
 <?php
 require_once 'model/model_paises.php';
 
-$pagina = 'Inicio';
+$pagina = 'Paises';
 
 $resultado = obtenerPaises($conexion);
 

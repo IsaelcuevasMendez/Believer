@@ -1,7 +1,7 @@
 <?php
 require_once 'model/model_idiomas.php';
 
-$pagina = 'Inicio';
+$pagina = 'Idiomas';
 
 $resultado = obtenerIdiomas($conexion);
 
