@@ -34,5 +34,20 @@ function eliminarActor($conexion, $id){
 
 
 function obtenerActoresPorID($conexion, $id){
+    $query = "SELECT * FROM actor WHERE actor_id = $id";
     
+    $resultado = mysqli_query($conexion, $query);
+    
+    return $resultado;
+}
+
+
+function editarActorPorID($conexion, $datos){
+    $query = "UPDATE actor
+    SET first_name = '{$datos['nombre']}', last_name = '{$datos['apellido']}'
+    WHERE actor_id = '{$datos['id']}'";
+
+    $resultado = mysqli_query($conexion, $query);
+    
+    return $resultado;
 }
