@@ -19,3 +19,32 @@ function insertarCategoria($conexion, $datos){
     
     return $resultado;
 }
+
+function eliminarCategoria($conexion, $id){
+
+    $query = "DELETE FROM category WHERE category_id = $id";
+
+    $resultado = mysqli_query($conexion, $query);
+
+    return $resultado;
+}
+
+
+function obtenerCategoriaPorID($conexion, $id){
+    $query = "SELECT * FROM category WHERE category_id = $id";
+    
+    $resultado = mysqli_query($conexion, $query);
+    
+    return $resultado;
+}
+
+
+function editarCategoriaPorID($conexion, $datos){
+    $query = "UPDATE category
+    SET name = '{$datos['nombre']}'
+    WHERE category_id = '{$datos['id']}'";
+
+    $resultado = mysqli_query($conexion, $query);
+    
+    return $resultado;
+}

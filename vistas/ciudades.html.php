@@ -3,18 +3,28 @@
 <div class="centrar">
     <div class="container">
         <form id="contact" action="" method="post">
-            <h3>Categoria</h3>
-            <h4>Formulario para ingresar las categorias</h4>
+            <h3>Actores</h3>
+            <h4>Formulario para ingresar los actores</h4>
 
-            <input type="hidden" name="id" value="<?php echo $info['category_id'] ?? '' ?>">
+            <input type="hidden" name="id" value="<?php echo $info['actor_id'] ?? '' ?>">
 
             <fieldset>
-                <input placeholder="Ingrese su nombre" name="nombre" type="text"
-                    value="<?php echo $info['name'] ?? ''?>" tabindex=" 1" required autofocus>
+                <input placeholder="Ingrese su nombre" name="nombre" value="<?php echo $info['first_name'] ?? '' ?>"
+                    type="text" tabindex="1" required autofocus>
             </fieldset>
-            <!-- <fieldset>
-                <input placeholder="Inserte su apellido" name="apellido" type="text" tabindex="2" required>
-            </fieldset> -->
+            <fieldset>
+                <select name="pais">
+                    <option value="">Seleccione un país</option>
+
+                    <?php
+                foreach ( $resultPais as $pais ) {
+                    echo "<option value='{$pais['country_id']}'>{$pais['country']}</option>";
+                }
+
+            ?>
+                </select>
+
+            </fieldset>
             <!-- <fieldset>
                     <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
                 </fieldset>
@@ -33,23 +43,25 @@
         </form>
     </div>
 
+
+
+
     <div class="container2">
         <section class="codepen-tabla">
             <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table>
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
-                            <th>acciones</th>
-
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                 </table>
             </div>
             <div class="tbl-content">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table>
                     <tbody>
 
 
@@ -57,14 +69,14 @@
 
                         while ($dato = mysqli_fetch_assoc($resultado)) {
                             echo "<tr>
-                                    <td>{$dato['category_id']}</td>
-                                    <td>{$dato['name']}</td>
-                                    <td>{$dato['last_update']}</td>
+                                    <td>{$dato['actor_id']}</td>
+                                    <td>{$dato['first_name']}</td>
+                                    <td>{$dato['last_name']}</td>
                                     <th>
-                                    <a class='codepen-table' href='categorias.php?eliminar={$dato['category_id']}'>Eliminar</a>
-                                    <a class='codepen-table' href='categorias.php?editar={$dato['category_id']}'>Editar</a>
-                                </th>
-                            </tr>";
+                                        <a class='codepen-table' href='actores.php?editar={$dato['actor_id']}'>Editar</a>
+                                        <a class='codepen-table' href='actores.php?eliminar={$dato['actor_id']}'>Eliminar</a>
+                                    </th>
+                                </tr>";
                         }
                     
 
