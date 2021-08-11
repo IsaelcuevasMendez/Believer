@@ -3,8 +3,8 @@
 <div class="centrar">
     <div class="container">
         <form id="contact" action="" method="post">
-            <h3>Paises</h3>
-            <h4>Formulario para ingresar los paises</h4>
+            <h3>Idiomas</h3>
+            <h4>Formulario para ingresar los Idiomas</h4>
             <fieldset>
                 <input placeholder="Ingrese su nombre" name="nombre" type="text" tabindex="1" required autofocus>
             </fieldset>
@@ -29,16 +29,16 @@
         </form>
     </div>
 
-    <div class="container">
+    <div class="container2">
         <section class="codepen-tabla">
             <div class="tbl-header">
                 <table>
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Acciones</th>
+                            <th>Idiomas</th>
+                            <th>Ultima actualizacion</th>
+                            <th></th>
                         </tr>
                     </thead>
                 </table>
@@ -55,9 +55,10 @@
                                     <td>{$dato['language_id']}</td>
                                     <td>{$dato['name']}</td>
                                     <td>{$dato['last_update']}</td>
-                                    <td>
-                                        <a href=''></a>
-                                    </td>
+                                        <td>
+                                            <a class='codepen-table' href='idiomas.php?eliminar={$dato['language_id']}'><img src='imagen/editar.png' alt='Editar'></a>
+                                            <a class='codepen-table' href='idiomas.php?editar={$dato['language_id']}'><img src='imagen/eliminar.png' alt='Eliminar'></a>
+                                        </td>
                                 </tr>";
                         }
                     

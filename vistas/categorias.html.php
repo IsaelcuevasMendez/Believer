@@ -36,20 +36,20 @@
     <div class="container2">
         <section class="codepen-tabla">
             <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table>
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>acciones</th>
+                            <th>Categoria</th>
+                            <th>Ultima Actualizacion</th>
+                            <th></th>
 
                         </tr>
                     </thead>
                 </table>
             </div>
             <div class="tbl-content">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table>
                     <tbody>
 
 
@@ -61,8 +61,8 @@
                                     <td>{$dato['name']}</td>
                                     <td>{$dato['last_update']}</td>
                                     <th>
-                                    <a class='codepen-table' href='categorias.php?eliminar={$dato['category_id']}'>Eliminar</a>
-                                    <a class='codepen-table' href='categorias.php?editar={$dato['category_id']}'>Editar</a>
+                                    <a class='codepen-table' href='categorias.php?eliminar={$dato['category_id']}'><img src='imagen/editar.png' alt='Editar'></a>
+                                    <a class='codepen-table' href='categorias.php?editar={$dato['category_id']}'><img src='imagen/eliminar.png' alt='Eliminar'></a>
                                 </th>
                             </tr>";
                         }

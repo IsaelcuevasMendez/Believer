@@ -43,7 +43,7 @@
                             <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
-                            <th>Acciones</th>
+                            <th></th>
                         </tr>
                     </thead>
                 </table>
@@ -51,7 +51,7 @@
             <div class="tbl-content">
                 <table>
                     <tbody>
-
+                        <img src="../imagen/Editar.png" alt="">
 
                         <?php
 
@@ -61,8 +61,8 @@
                                     <td>{$dato['first_name']}</td>
                                     <td>{$dato['last_name']}</td>
                                     <th>
-                                        <a class='codepen-table' href='actores.php?editar={$dato['actor_id']}'>Editar</a>
-                                        <a class='codepen-table' href='actores.php?eliminar={$dato['actor_id']}'>Eliminar</a>
+                                        <a class='codepen-table' href='actores.php?editar={$dato['actor_id']}'><img src='imagen/editar.png' alt='Editar'></a>
+                                        <a class='codepen-table' href='actores.php?eliminar={$dato['actor_id']}'><img src='imagen/eliminar.png' alt='Eliminar'></a>
                                     </th>
                                 </tr>";
                         }

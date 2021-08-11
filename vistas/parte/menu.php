@@ -1,28 +1,16 @@
 <header>
     <button class="hamburger">&#9776;</button>
     <button class="cross">&#735;</button>
+    <!-- <input type="text"> -->
 </header>
 
 <div class="menu">
     <ul>
-        <a href="actores.php">
-            <li>Actores</li>
-        </a>
-        <a href="idiomas.php">
-            <li>Idiomas</li>
-        </a>
-        <a href="categorias.php">
-            <li>Categoria</li>
-        </a>
-        <a href="paises.php">
-            <li>Paises</li>
-        </a>
-        <!-- <a href="#">
-            <li>LINK FIVE</li>
-        </a>
-        <a href="#">
-            <li>LINK SIX</li>
-        </a> -->
+        <li><a href="actores.php">Actores</a></li>
+        <li><a href="idiomas.php">Idiomas</a></li>
+        <li><a href="categorias.php">Categorias</a></li>
+        <li><a href="paises.php">Paises</a></li>
+        <li><a href="ciudades.php">ciudades</a></li>
 
     </ul>
 </div>

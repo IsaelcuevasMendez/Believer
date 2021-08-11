@@ -3,8 +3,8 @@
 <div class="centrar">
     <div class="container">
         <form id="contact" action="" method="post">
-            <h3>Actores</h3>
-            <h4>Formulario para ingresar los actores</h4>
+            <h3>Ciudades</h3>
+            <h4>Formulario para ingresar los Ciudades</h4>
 
             <input type="hidden" name="id" value="<?php echo $info['actor_id'] ?? '' ?>">
 
@@ -54,8 +54,9 @@
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Acciones</th>
+                            <th>Ciudad</th>
+                            <th>Ultima actualizacion</th>
+                            <th></th>
                         </tr>
                     </thead>
                 </table>
@@ -69,12 +70,13 @@
 
                         while ($dato = mysqli_fetch_assoc($resultado)) {
                             echo "<tr>
-                                    <td>{$dato['actor_id']}</td>
-                                    <td>{$dato['first_name']}</td>
-                                    <td>{$dato['last_name']}</td>
+                                    <td>{$dato['city_id']}</td>
+                                    <td>{$dato['city']}</td>
+                                    <td>{$dato['country_id']}</td>
+                                    <td>{$dato['last_update']}</td>
                                     <th>
-                                        <a class='codepen-table' href='actores.php?editar={$dato['actor_id']}'>Editar</a>
-                                        <a class='codepen-table' href='actores.php?eliminar={$dato['actor_id']}'>Eliminar</a>
+                                        <a class='codepen-table' href='ciudades.php?editar={$dato['city_id']}'><img src='imagen/editar.png' alt='Editar'></a>
+                                        <a class='codepen-table' href='ciudades.php?eliminar={$dato['city_id']}'><img src='imagen/eliminar.png' alt='Eliminar'></a>
                                     </th>
                                 </tr>";
                         }

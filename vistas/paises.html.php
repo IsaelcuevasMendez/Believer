@@ -32,18 +32,19 @@
     <div class="container">
         <section class="codepen-tabla">
             <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table>
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Pais</th>
+                            <th>Ultima Actualizacion</th>
+                            <th></th>
                         </tr>
                     </thead>
                 </table>
             </div>
             <div class="tbl-content">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table>
                     <tbody>
 
 
@@ -54,6 +55,10 @@
                                     <td>{$dato['country_id']}</td>
                                     <td>{$dato['country']}</td>
                                     <td>{$dato['last_update']}</td>
+                                    <td>
+                                        <a class='codepen-table' href='paises.php?eliminar={$dato['country_id']}'><img src='imagen/editar.png' alt='Editar'></a>
+                                        <a class='codepen-table' href='paises.php?editar={$dato['country_id']}'><img src='imagen/eliminar.png' alt='Eliminar'></a>
+                                    </td>
                                 </tr>";
                         }
                     
