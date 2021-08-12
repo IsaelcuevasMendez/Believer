@@ -29,7 +29,7 @@
         </form>
     </div>
 
-    <div class="container">
+    <div class="container2">
         <section class="codepen-tabla">
             <div class="tbl-header">
                 <table>
