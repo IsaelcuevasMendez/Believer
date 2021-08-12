@@ -52,24 +52,20 @@
                 <table>
                     <tbody>
                         <img src="../imagen/Editar.png" alt="">
-
                         <?php
 
-                        while ($dato = mysqli_fetch_assoc($resultado)) {
-                            echo "<tr>
-                                    <td>{$dato['actor_id']}</td>
-                                    <td>{$dato['first_name']}</td>
-                                    <td>{$dato['last_name']}</td>
-                                    <th>
-                                        <a class='codepen-table' href='actores.php?editar={$dato['actor_id']}'><img src='imagen/editar.png' alt='Editar'></a>
-                                        <a class='codepen-table' href='actores.php?eliminar={$dato['actor_id']}'><img src='imagen/eliminar.png' alt='Eliminar'></a>
-                                    </th>
-                                </tr>";
-                        }
-                    
-
+                            while ($dato = mysqli_fetch_assoc($resultado)) {
+                                echo "<tr>
+                                        <td>{$dato['actor_id']}</td>
+                                        <td>{$dato['first_name']}</td>
+                                        <td>{$dato['last_name']}</td>
+                                        <th>
+                                            <a class='codepen-table' href='actores.php?editar={$dato['actor_id']}'><img src='imagen/editar.png' alt='Editar'></a>
+                                            <a class='codepen-table' href='actores.php?eliminar={$dato['actor_id']}'><img src='imagen/eliminar.png' alt='Eliminar'></a>
+                                        </th>
+                                    </tr>";
+                            }
                         ?>
-
                     </tbody>
                 </table>
             </div>

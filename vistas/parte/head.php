@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <!-- Css  -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/scss.css">
+    <link rel="stylesheet" href="css/select.css">
+    <link rel="stylesheet" href="css/menufijo.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="imagen/chip.ico" type="image/x-icon">
     <!-- jquery -->
